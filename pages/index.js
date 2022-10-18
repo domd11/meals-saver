@@ -42,7 +42,7 @@ export default function Home() {
     <br />
     <div className='signin' onClick={signIn}>
     <Image className='google-icon' style={{ hieght: '100px' }} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABmJLR0QA/wD/AP+gvaeTAAADNUlEQVRIid2VWUiUURTH//fbJs3UcTIzs0XTSqOFMpOSIIUoksgeCopJWp4qKaqHjCQwKuullSKp0GghEAm0BUxEi1YpG0NzKbOgTB01s3Hmft+9PcSM883ojOSb/6e7nt855957LjBWRPwt4EfkZehkOfjNktGHEKiQYADFeNILI6lGqHCa5NHX/wXhR5VEfFOL0cJmg/uwIAKYJdRhspxJjtubRgzhB8VdqGNX0M8FXx7qFExULBC2kRPabc8pyQtwSNyJGu0q6IjN/5MIDi60AJrXlC4SfkxJwAtq8YpABBAjfMQ4PEMAmsAxFT1IQyubAwrASCgSpVRykr4ciq+PxKoVeQEiSRemS+nkDH3nuZkfVObBqhYjQjQPB9BFwp8GTIODtaBclfBUAziAKNIJmc8gN9E/nIGRaNBrxjIhQsJqCciSgTDCECmtGS0AcE8XR7qrHSsAe5UbJN3+xnPD4YtH89psUzf6MkrA+ERDd83Z7ByzHgJE61bKvGIoA10OY2pFR8pcf97Hjv8SA8AMuKcLMHn40+nPkC/1qUGys+0O6dIv4+GjgQRJf1wvzf1M2kAw39lt1EIygI5bnptNSnf1qvDnkzzHP/yKi2+3TxSd/TC5u9fZHrzClYZsEJxjILhri0XxQAyWKz9TDqx9+cKf1ycK9qdead5aRbkrQ1g3paKkYN++TMA9XUQo6eUKze1Lwh1bHBxcxFctsDT//vIJvgAXC82mqo7k++4AiWiIln+cdPZdELLS9vVS/7z6Wjp4/s1qiOk7MbReKFu6ZCjAvUeJSxts0yy1PQlG9/Fk49uG3N2nXOVfV1aiFfvmetVh6WGKK7fNWnBYqxb0Ord0RWM4GaiQiPrZAXGGlQWk3bMZ4wcm1yFdM6D8y3oAQLhi1eJC23TvyKvUX36waPsTR9S1Ae5VoH0qwjoT1S2b+Iaosqz83XlFPiEAcP7BEvMrOum6e0T+ZCJ2LYnZduzJrCz0nBv2Z7zxePGcTzSw+D0NS9B8/NISGBbKVksc/71xS8a7kf+MOtjDhUntLCDHygwpVq6E2pkkBQqUhhDaEyH+qTaJtvys1ZYaf3bGhv4C2CwrudPtzEAAAAAASUVORK5CYII=" alt="google-icons" />
-    <span>Sign In</span>
+    <span className='text'>Sign In</span>
     </div>
     </div>
     </div>
