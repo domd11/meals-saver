@@ -47,10 +47,9 @@ const Indregient = () => {
 
 
 if (!user) {
-  router.push("/")
-  return <h1>You are not a user. you cannot be here</h1>
-}
 
+  return <h1>You are not a user. You cannot be here</h1>
+}
 
   
 
