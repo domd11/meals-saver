@@ -8,11 +8,11 @@ import { getFirestore } from "firebase/firestore"
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: process.env.GOOGLE_API_KEY,
-  authDomain: "api-practice-34748.firebaseapp.com",
-  projectId: "api-practice-34748",
-  storageBucket: "api-practice-34748.appspot.com",
-  messagingSenderId: "176420384681",
-  appId: "1:176420384681:web:3fb0b169e97d935e055eb8"
+  authDomain: process.env.GOOGLE_AUTH_DOMAIN,
+  projectId: process.env.GOOGLE_PROJECT_ID,
+  storageBucket: process.env.GOOGLE_STORAGE_BUCKET,
+  messagingSenderId: process.env.GOOGLE_MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID
 };
 
 // Initialize Firebase
