@@ -143,7 +143,6 @@ const Meals = () => {
 
                     <button  id={`${meal.strMeal}toggle-btn`} className='toggle' onClick={() => {router.push(`/Foods/Meal/${meal.idMeal}`)}}>More Info</button>
 
-                    <button onClick={() => {getLikedMeals(meal)}}>Test 123</button>
                     
                     {meal.strYoutube !== null ? (
                       <Link style={{ verticalAlign:'middle', display: 'inline' }} href={meal.strYoutube}>
