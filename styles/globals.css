@@ -2,6 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -11,9 +12,265 @@ a {
   text-decoration: none;
 }
 
+.thumbnail {
+  height: 100px;
+  border-radius: 20px;
+}
+
+.good-modal {
+  width: 500px;
+}
+
+.youtube-link {
+  background-color: tomato;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  
+  border: none;
+  padding: 3px;
+  padding-right: 5px;
+}
+
+.remove-liked {
+  padding: 4px;
+  margin-left: 7px;
+  background-color: orangered;
+  border: none;
+  padding: 7px;
+  border-radius: 3px;
+}
+
+.heading {
+  margin-right: 10px;
+}
+
+.links h1 {
+  display: inline-flex;
+  margin-right: 7px;
+}
+
+.nav-item {
+  margin: 0;
+  float: right;
+}
+
+.span {
+  font-size: larger;
+}
+
+.nav-item:hover {
+  color: aqua;
+}
+
+.nav-item-image {
+  margin: 0;
+  float: right;
+}
+
+.navbar h1{
+  display: inline;
+
+}
+
+.thumbnail-dashboard {
+  height: 150px;
+  margin-right: 10px;
+  border-radius: 25%;
+}
+
+.dashboard-meal {
+  font-size: 30px;
+  
+}
+
+.link-item:hover {
+  color: cadetblue;
+  transition: ease-out;
+  transition-duration: 1s;
+}
+
+.dashboard-housing {
+  display: inline-flex;
+}
+
+.liked {
+  margin-top: 10px; 
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 20px;
+  width: fit-content;
+  padding-right: 20px;
+
+  margin-right: 10px;
+}
+
+
+.save-btn {
+  vertical-align: "middle";
+  display: inline;
+  background-color: rgb(255, 213, 0);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  
+  border: none;
+  padding: 5px;
+  padding-right: 6px;
+  margin-left: 7px;
+}
+
+.image-about {
+  height: 200px;
+  border-radius: 40px;
+}
+
+.container{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.about-container {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.image-text {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  padding-left: 10px;
+}
+
+.navbar {
+  
+  border-bottom: 1px solid gray;
+
+  margin: 0;
+  padding: 0;
+
+  margin-bottom: 10px;
+
+  padding: 10px;
+}
+
+.signout {
+  background-color: red;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.navbar li {
+  list-style: none;
+
+  padding: 5px;
+  
+}
+
+
+
+
+
+
+.signin {
+  background: cornflowerblue;
+  border: none;
+  padding-right: 10px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  padding-top: 2px;
+  border-radius: 30px;
+  margin-top: 10px;
+
+
+  display: inline-flex;
+  align-items: center;
+
+  text-align: center;
+  align-self: center;
+
+}
+
+.google-icon {
+  margin-right: 5px;
+}
+
+.header {
+  vertical-align: center;
+}
+
+.link {
+
+  border: 1px solid white;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.link:hover {
+  border: 1px solid blue;
+  color: blue;
+
+  transition: linear;
+  transition-duration: 0.5s;
+}
+
+.header {
+  text-align: center;
+}
+
+.toggle {
+  padding: 7px;
+  border: none;
+  background-color: blue;
+  border-radius: 3px;
+  margin-right: 7px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid black;
+  background: none;
+  margin-right: 3px;
+
+  outline: none;
+
+}
+
+input:focus {
+  border: 1px solid cadetblue;
+}
+
+.search-btn {
+  padding: 10px;
+  border: none;
+
+  background: none;
+
+  border-radius: 3px;
+  border: 1px solid white;
+
+  
+}
+
+.meal-name:hover {
+  color: cadetblue;
+}
+
+.search-btn:hover {
+  color: cadetblue;
+  border: 1px solid cadetblue;
+}
+
 * {
   box-sizing: border-box;
 }
+
+/* --------------------------- Dark Mode ---------------------------------------------------- */
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -22,5 +279,37 @@ a {
   body {
     color: white;
     background: black;
+  }
+
+  .liked {
+    border: 1px solid white;
+  }
+
+  input {
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid white;
+    background: none;
+    margin-right: 3px;
+  
+    outline: none;
+  
+  }
+
+  .search-btn {
+    padding: 10px;
+    border: none;
+
+    background: none;
+  
+    border-radius: 3px;
+    border: 1px solid white;
+  
+    
+  }
+
+  .search-btn:hover {
+    color: cadetblue;
+    border: 1px solid cadetblue;
   }
 }
