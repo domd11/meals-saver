@@ -4,4 +4,9 @@ const nextConfig = {
   swcMinify: true,
 }
 
-module.exports = nextConfig
+module.exports = {
+  nextConfig, 
+  env: {
+    GOOGLE_API_KEY: "AIzaSyBx5aRD2vIFeiqNRPqmHcx66Dldvbk63Mw", 
+  }, 
+}
