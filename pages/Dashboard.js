@@ -7,6 +7,7 @@ import { Image } from 'semantic-ui-react';
 import Link from 'next/link';
 import { db } from '../firebaseApp';
 import { doc, setDoc, collection, getDocs, deleteDoc } from 'firebase/firestore';
+import NotUser from './NotUser';
 const Dashboard = () => {
     
 const app = initFirebase()
@@ -58,7 +59,7 @@ if (loading) {
 
 if (!user) {
 
-    return <h1>You are not a user. You cannot be here</h1>
+    return <NotUser />
   }
 
 
@@ -85,6 +86,7 @@ if (!user) {
             <div className='links'>
                 <li><Link href="/Foods/Meal/Meals">View Meals</Link></li>
                 <li><Link href="/Foods/Meal/Location">View Meals By Location</Link></li>
+                <li><Link href="/Foods/Meal/Ingredient">View Meals by Main Ingredient</Link></li>
             </div>
 
 

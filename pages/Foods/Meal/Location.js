@@ -8,6 +8,8 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import SecondLikeButton from '../../SecondLikeButton';
 import { doc, getDoc,  } from 'firebase/firestore';
 import { db } from '../../../firebaseApp';
+import Error from '../../Error';
+import NotUser from '../../NotUser';
 
 const Location = () => {
     const [meals, setMeals] = useState([]); 
@@ -52,7 +54,7 @@ const Location = () => {
 
     if (!user) {
 
-        return <h1>You are not a user. You cannot be here</h1>
+        return <NotUser />
       }
   return (
     <div>
@@ -77,9 +79,7 @@ const Location = () => {
         })
         )
         : 
-        <div className='error'>
-        No data available
-        </div>
+        <Error />
     }
     </div>
     </div>

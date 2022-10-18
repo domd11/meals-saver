@@ -9,6 +9,8 @@ import { doc, setDoc, collection, getDocs, getDoc } from 'firebase/firestore';
 import { useAuthState } from "react-firebase-hooks/auth"
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { db } from '../../../firebaseApp';
+import Error from '../../Error';
+import NotUser from '../../NotUser';
 const Meals = () => {
     const [meals, setMeals] = useState([]); 
     const [search, setSearch] = useState("")
@@ -107,7 +109,7 @@ const Meals = () => {
 
     if (!user) {
 
-        return <h1>You are not a user. You cannot be here</h1>
+        return <NotUser />
       }
     
 
@@ -179,9 +181,7 @@ const Meals = () => {
         
         </div>
     ) : 
-        <div className='error'>
-        No data available
-        </div>
+        <Error />
 }
         </div>
     </div>

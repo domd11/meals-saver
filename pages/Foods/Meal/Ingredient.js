@@ -5,6 +5,8 @@ import Navbar from '../../Navbar'
 import SecondLikeButton from '../../SecondLikeButton';
 import { useAuthState } from "react-firebase-hooks/auth"
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import Error from '../../Error';
+import NotUser from '../../NotUser';
 const Indregient = () => {
   const [meals, setMeals] = useState([]); 
   const [search, setSearch] = useState("chicken breast")
@@ -48,7 +50,7 @@ const Indregient = () => {
 
 if (!user) {
 
-  return <h1>You are not a user. You cannot be here</h1>
+  return <NotUser />
 }
 
   
@@ -79,7 +81,7 @@ if (!user) {
           <SecondLikeButton meal={meal}/>
           </div>
           )
-      }) : <p>No data available</p>}
+      }) : <Error />}
     </div></div>
   )
 }

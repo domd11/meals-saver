@@ -7,6 +7,7 @@ import { Image } from 'semantic-ui-react';
 import Navbar from './Navbar';
 import { db } from '../firebaseApp';
 import { collection, getDocs } from 'firebase/firestore';
+import NotUser from './NotUser';
 const Account = () => {
     
 const app = initFirebase()
@@ -32,7 +33,7 @@ const logOut = () => {
 
 if (!user) {
 
-    return <h1>You are not a user. You cannot be here</h1>
+    return <NotUser />
   }
 
 

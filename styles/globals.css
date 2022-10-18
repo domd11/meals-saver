@@ -12,6 +12,20 @@ a {
   text-decoration: none;
 }
 
+.not-user-link {
+  text-decoration: underline;
+}
+
+Link:hover {
+  cursor: pointer;
+}
+
+.not-user-link:hover {
+  cursor: pointer;
+}
+
+
+
 .thumbnail {
   height: 100px;
   border-radius: 20px;
@@ -19,6 +33,22 @@ a {
 
 .good-modal {
   width: 500px;
+}
+
+.error-container {
+  text-align: center;
+  background: tomato;
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+.error-image {
+  margin: 0;
 }
 
 .youtube-link {
@@ -73,6 +103,16 @@ a {
 
 }
 
+.nouser-container {
+  background-color: tomato;
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
 .thumbnail-dashboard {
   height: 150px;
   margin-right: 10px;
@@ -88,6 +128,8 @@ a {
   color: cadetblue;
   transition: ease-out;
   transition-duration: 1s;
+
+  cursor: pointer;
 }
 
 .dashboard-housing {
@@ -216,6 +258,7 @@ a {
 
   transition: linear;
   transition-duration: 0.5s;
+  cursor: pointer;
 }
 
 .header {
