@@ -89,9 +89,7 @@ const Meals = () => {
         }
     }, []); 
 
-    if (!user) {
-      return <h1>You are not a user. you cannot be here</h1>
-    }
+
 
     async function getLikedMeals (meal) {
         const docRef = doc(db, `users/${user.uid}/liked-recipies/`, meal.strMeal );
