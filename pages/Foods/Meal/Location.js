@@ -51,8 +51,10 @@ const Location = () => {
 
 
     if (!user) {
+        router.push("/")
         return <h1>You are not a user. you cannot be here</h1>
       }
+    
   return (
     <div>
     <Navbar />

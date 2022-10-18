@@ -30,6 +30,12 @@ const logOut = () => {
     router.push("/")
 }
 
+if (!user) {
+    router.push("/")
+    return <h1>You are not a user. you cannot be here</h1>
+  }
+
+
 
 
 
