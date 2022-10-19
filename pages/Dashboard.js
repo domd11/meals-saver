@@ -24,6 +24,7 @@ const signIn = async () => {
 
 
 
+
 useEffect(() => {
     if (!loading) {
         ;(async () => {
@@ -45,6 +46,7 @@ useEffect(() => {
             console.log(docs)
         })()
     }
+
 }, [loading])
 
 async function deleteLikedItem (meal) {

@@ -5,7 +5,7 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth"
 import { useRouter } from "next/router"
 import { Image } from 'semantic-ui-react';
-import { collection, doc, setDoc } from 'firebase/firestore'; 
+import { addDoc, collection, doc, setDoc } from 'firebase/firestore'; 
 import { db } from '../firebaseApp';
 export default function Home() {
   const {data: session} = useSession()
@@ -19,7 +19,7 @@ export default function Home() {
 
   const signIn = async () => {
     const result = await signInWithPopup(auth, provider); 
-    console.log(result.user.uid)
+    console.log(result.user)
 
   }
 
@@ -29,8 +29,17 @@ export default function Home() {
   }
 
   if (user) { 
+    const userRef = doc(db, 'users', user.uid); 
+
+    setDoc(userRef, {
+      name: user.displayName, 
+      email: user.email, 
+      phone: user.phoneNumber, 
+    })
+
+    
+
     router.push("/Dashboard")
-    return <h1>Welcome, {user.displayName}</h1>
   }
 
 
