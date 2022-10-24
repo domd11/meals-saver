@@ -10,6 +10,7 @@ import { db } from '../firebaseApp';
 import { AiTwotoneStar } from 'react-icons/ai'
 
 
+
 const LikeButton2 = ({ drink }) => {
   const app = initFirebase()
 
@@ -18,17 +19,17 @@ const LikeButton2 = ({ drink }) => {
   const [user, loading] = useAuthState(auth);
   const router = useRouter(); 
 
-  const likeRecipie = (drink) => {
-    setDoc(doc(db, `users/${user.uid}/liked-drinks`, drink.strDrink), {
+  const likeDrink = async (drink) => {
+    await setDoc(doc(db, `users/${user.uid}/liked-drinks`, drink.strDrink), {
       id: drink.idDrink, 
-      imageUrl: drink.strDrinkThumb, 
+      imageUrl: drink.strDrinkThumb,
     })
   }
 
   return (
-    <button className='save-btn' onClick={() => {likeRecipie(drink)}}>
-    <AiTwotoneStar className="icon-styles" />
-    Save Meal    
+    <button className='save-btn' onClick={() => {likeDrink(drink)}}>
+    <AiTwotoneStar  className="icon-styles"/>
+    Save Drink    
     </button>
   )
 }

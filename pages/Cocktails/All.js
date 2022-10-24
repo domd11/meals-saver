@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { Image } from 'semantic-ui-react';
-import LikeButton from '../LikeButtonDrink';
 import Navbar from '../NavbarDrink';
 import Error from '../Error';
 
 import { CgDanger } from 'react-icons/cg'
 import { AiFillCheckCircle } from 'react-icons/ai';
+import { Router, useRouter } from 'next/router';
+import LikeButton from '../LikeButtonDrink';
+
 const All = () => {
     const [cocktails, setCocktails] = useState([]); 
     const [search, setSearch] = useState("")
+
+    const router = useRouter(); 
 
     const fetchData = () => {
         fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`).then((response) => {
@@ -43,7 +47,7 @@ const All = () => {
                 return (
                     <div className='card' key={cocktail.idDrink}>
                         <Image className='thumbnail' src={cocktail.strDrinkThumb} />
-                        <h2>{cocktail.strDrink}</h2>
+                        <h2 className='about-link' onClick={() => {router.push(`/Cocktails/Cocktail/${cocktail.idDrink}`)}}>{cocktail.strDrink}</h2>
                         <span className={cocktail.strAlcoholic === "Alcoholic" ? "alcoholic" : "clean"}>
                         {cocktail.strAlcoholic !== "Alcoholic" ? <AiFillCheckCircle className="icon-styles" /> : <CgDanger className='icon-styles'/>}
                         {cocktail.strAlcoholic}

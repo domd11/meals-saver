@@ -65,13 +65,13 @@ const [user, loading] = useAuthState(auth);
                         <span className='span'>{meal.strTags}</span>
                         <br />
                         {meal.strYoutube !== null ? (
-                      <Link style={{ verticalAlign:'middle', display: 'inline' }} href={meal.strYoutube} target="_top">
+                      <a style={{ verticalAlign:'middle', display: 'inline' }} href={meal.strYoutube} target="_blank" rel="noreferrer">
                                       <button className='youtube-link'>
                                       <Image style={{ verticalAlign: "middle" }} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABNUlEQVRIidWVvU4CQRhFz5KAjYkmtlZa2Fnoe8BijI+gj2BrJ+rLwHuoCZ1BqdRY2FEZNR6LhbjC/sy6Ntxkq7lzz8w3s9/AsisqGlRbQDz99oDN6dATcAv0gX4URe+VyeqBOrZcD2q3SnBDvQwInteF2ggBXP0hfKZeSFnqKs4Lb5nUs67GJpcDgHTNYmC7YIOfpfVNtAW08wBF2gBOgNcAyGKWOirad8q3qp6pbwX2uyzAJASQ8u+owxz7ZOYrv7c1lQa8hExQ103u+xDYzbE9ZwGuS4LX1GNgBJwCKwX2xSz1qOgMKuowC9BU7/8h/NePNg/p1gz/UtuZ4SnIXzrpTOeF4VNAw6T1Vl15z5B2nQLFhp3JSO3k5ZQ9mU2gQ9Jb9vl5Mh+BG2AADKIo+ghe+dLpG8fvdSDgFn06AAAAAElFTkSuQmCC" /> 
 
                                       Youtube Video
                                       </button>
-                                      </Link>
+                                      </a>
                     )
                      : ""}
                      <LikeButton meal={meal}/>

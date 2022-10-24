@@ -90,6 +90,13 @@ select::after{
   font-size: 15px;
 }
 
+.about-link:hover {
+  cursor: pointer;
+  color: cadetblue;
+  transition: ease-in;
+  transition-duration: 1s;
+}
+
 .clean {
   background-color: green;
   border-radius: 10px;

@@ -126,6 +126,8 @@ if (!user) {
                 <li><Link href="/Foods/Meal/Meals">View Meals</Link></li>
                 <li><Link href="/Foods/Meal/Location">View Meals By Location</Link></li>
                 <li><Link href="/Foods/Meal/Ingredient">View Meals by Main Ingredient</Link></li>
+                <br />
+                <br />
                 <li><Link href="/Cocktails/All">View All Cocktails</Link></li>
                 <li><Link href="Cocktails/Ingredient">View Cocktails by Ingredient</Link></li>
             </ul>
@@ -168,7 +170,7 @@ if (!user) {
                     return (
                        <div className=' liked' key={drink.idDrink}>
                         <Image className='thumbnail-dashboard' src={drink.imageUrl} />
-                        <p className='dashboard-meal link-item'>{drink.id}</p>
+                        <p className='dashboard-meal link-item' onClick={() =>{router.push(`/Cocktails/Cocktail/${drink.idDrink}`)}}>{drink.id}</p>
                        
                         <button className='signout' onClick={() => {deleteLikedItemDrink(drink)}}>
                             <HiOutlineTrash style={{ height: '40px', width: '40px' }} />
