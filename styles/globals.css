@@ -26,6 +26,23 @@ Link:hover {
 }
 
 
+select {
+  padding: 10px;
+  border: 1px solid cadetblue;
+}
+
+select::after{
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+
 
 .thumbnail {
   height: 100px;
@@ -51,6 +68,36 @@ Link:hover {
 
 .error-image {
   margin: 0;
+}
+
+.card {
+  border: 1px solid white;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+
+  display: inline-block;
+}
+
+
+.alcoholic {
+  background-color: red;
+  border-radius: 10px;
+  margin-bottom: 100px;
+  padding: 10px;
+  border: 1px solid white;
+  font-weight: 800;  
+  font-size: 15px;
+}
+
+.clean {
+  background-color: green;
+  border-radius: 10px;
+  margin-bottom: 100px;
+  padding: 10px;
+  border: 1px solid white;
+  font-weight: 800;  
+  font-size: 15px;
 }
 
 .youtube-link {
@@ -80,6 +127,26 @@ Link:hover {
 .links h1 {
   display: inline-flex;
   margin-right: 7px;
+}
+
+ul.links{ 
+
+  padding: 0;
+  margin: 0;
+
+  margin-top: 30px;
+}
+
+.links li {
+  list-style: none;
+  display: inline;
+  background-color: cadetblue;
+  padding: 10px;
+  
+}
+
+.links li:hover {
+  background: rgb(123, 207, 210);
 }
 
 .nav-item {
@@ -151,6 +218,38 @@ Link:hover {
   margin-right: 10px;
 }
 
+.door {
+  height: 30px;
+  width: 20px;
+  
+  padding: 0;
+  margin: 0;
+}
+
+.icon-styles {
+  /* style={{ height: '20px', width:'20px', verticalAlign: 'middle' }} */
+
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+
+
+.back {
+  background-color: cadetblue;
+
+  padding: 10px;
+
+  margin-top: 10px;
+  border: none;
+  border-radius: 40px;
+
+  padding-right: 20px;
+  font-size: 20px;
+}
+
 
 .save-btn {
   vertical-align: "middle";
@@ -164,6 +263,8 @@ Link:hover {
   padding: 5px;
   padding-right: 6px;
   margin-left: 7px;
+
+  margin-top: 5px;
 }
 
 .image-about {
@@ -174,6 +275,7 @@ Link:hover {
 .container{
   margin-left: 10px;
   margin-right: 10px;
+
 }
 
 .about-container {

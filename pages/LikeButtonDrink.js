@@ -9,22 +9,22 @@ import { db } from '../firebaseApp';
 
 import { AiTwotoneStar } from 'react-icons/ai'
 
-
-const LikeButton = ({ meal }) => {
+const LikeButton = ({ drink }) => {
   const app = initFirebase()
 
   const auth = getAuth();
   const provider = new GoogleAuthProvider(); 
   const [user, loading] = useAuthState(auth);
   const router = useRouter(); 
-  const mealsId = []; 
+  const drinksId = []; 
 
-  const likeRecipie = (meal) => {
-    setDoc(doc(db, `users/${user.uid}/liked-recipies`, meal.strMeal), {
-      idMeal: meal.idMeal, 
-      area: meal.strArea, 
-      category: meal.strCategory,
-      imageUrl: meal.strMealThumb,
+  const likeRecipie = (drink) => {
+    setDoc(doc(db, `users/${user.uid}/liked-drinks`, drink.strDrink), {
+      idDrink: drink.idDrink, 
+      alcoholic: drink.strAlcoholic, 
+      category: drink.strCategory,
+      imageUrl: drink.strDrinkThumb,
+      tags: drink.strTags, 
     })
 
   }
@@ -38,9 +38,9 @@ const LikeButton = ({ meal }) => {
 
 
   return (
-    <button className='save-btn' onClick={() => {likeRecipie(meal)}}>
+    <button className='save-btn' onClick={() => {likeRecipie(drink)}}>
     <AiTwotoneStar  className="icon-styles" />
-    Save Meal    
+    Save Drink    
     </button>
   )
 }

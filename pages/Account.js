@@ -8,6 +8,9 @@ import Navbar from './Navbar';
 import { db } from '../firebaseApp';
 import { collection, getDocs } from 'firebase/firestore';
 import NotUser from './NotUser';
+
+import { HiChevronLeft } from "react-icons/hi";
+import BackButton from './BackButton';
 const Account = () => {
     
 const app = initFirebase()
@@ -46,14 +49,16 @@ if (loading) {
 
   return (
     <div style={{ marginLeft: '10px', marginRight: '10px' }} className='container'>
+     <BackButton />
     {!loading && user ? (
         <div>
-        <Navbar />
             <h1>{user.displayName}</h1>
             <button className='signout'  onClick={() => {
                 auth.signOut(); 
                 router.push("/")
             }}>Logout</button>
+
+           
 
 
             {!loading ? (

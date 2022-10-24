@@ -7,6 +7,9 @@ import { initFirebase } from '../firebaseApp'
 import { useRouter } from "next/router"
 import { db } from '../firebaseApp';
 
+import { AiTwotoneStar } from 'react-icons/ai'
+
+
 
 const LikeButton2 = ({ meal }) => {
   const app = initFirebase()
@@ -24,7 +27,7 @@ const LikeButton2 = ({ meal }) => {
 
   return (
     <button className='save-btn' onClick={() => {likeRecipie(meal)}}>
-    <Image style={{ verticalAlign: 'middle' }} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAA2ElEQVQ4jd2RvQ4BQRRGPyIboZJt1Ntu6afxABLeZgtRegUdJQXPoqLxBJSIglKOwmCy2bWzoXKSW8zPPffOHekvAPpA71eyELiZCH8hnPJm8q2sBlws4RXwP+UUU0RlIJA0lFS1jiqSBkAAlLO6CYEVcMCdg8l5zbZkOTuS2hlTiOOb6Ejaxjv0gEWO7p4sAC/t2QVglEM2BhL/IS6OHGRRUm6afZ9ZVdrlEbYchIl30oSN2PpswqbpUPQBcLJmtQTqJpbW/jGPcA6sgW7CWRfYADNn4X9zBzZYXkqhpUINAAAAAElFTkSuQmCC" alt="like"/>
+    <AiTwotoneStar  className="icon-styles"/>
     Save Meal    
     </button>
   )
