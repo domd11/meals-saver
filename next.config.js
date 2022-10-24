@@ -12,6 +12,6 @@ module.exports = {
     GOOGLE_PROJECT_ID:"api-practice-34748",
     GOOGLE_STORAGE_BUCKET:"api-practice-34748.appspot.com",
     GOOGLE_MESSAGING_SENDER_ID:"176420384681", 
-    APP_ID:"1:176420384681:web:3fb0b169e97d935e055eb8",
+    APP_ID:"1:176420384681:web:3fb0b169e97d935e055eb8"
   }, 
 }
